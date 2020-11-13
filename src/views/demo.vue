@@ -6,7 +6,7 @@
         </div>
         <div class="item">
             <span>复选框：</span>
-            <checkBox :checked="isChecked" />
+            <checkBox :checked.sync="isChecked" />
             <!-- <dropDownMenu :items="items" :selectedItem.sync="selectedItem" @change="change" /> -->
         </div>
         <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->

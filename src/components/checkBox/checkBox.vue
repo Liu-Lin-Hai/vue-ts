@@ -17,6 +17,15 @@ export default class checkBox extends Vue {
     @Prop({ required: true }) private checked!: boolean;
     @Prop({ required: false, default: '' }) private name!: string;
     @Prop({ required: false, default: false }) private disabled!: boolean;
+
+    private check() {
+        if (this.disabled) {
+            return;
+        }
+        let checked = this.checked ? false : true;
+        this.$emit("update:checked", checked);
+        this.$emit('change');
+    }
 }
 </script>
 <style scoped lang="less">
